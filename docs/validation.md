@@ -11,6 +11,7 @@
 - أعادت `/api/status` حالة HTTP 200 و`ready` بعد الاستدلال. حُفظ ملخص الفحص في local-validation.json.
 - شغّل Flask على 127.0.0.1:5000 وعوينت لقطة فعلية للوحة. فحص المتصفح على عرض 390 بكسل لم يجد تجاوزًا أفقيًا.
 - قورنت SHA-256 لنسخ PDF الثلاثة مع الأصل، وتطابقت جميعها.
+- نجح تثبيت المتطلبات وتشغيل الاختبارات أيضًا على Ubuntu ضمن [GitHub Actions](https://github.com/rayan18q-bot/AI-Enhanced-Intrusion-Detection-System-with-Risk-Assessment/actions/runs/41548189173) للنسخة ac27f42.
 
 ## حدود التحقق
 
