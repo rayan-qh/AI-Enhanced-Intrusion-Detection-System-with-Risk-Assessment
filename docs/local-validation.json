@@ -1,0 +1,6 @@
+{
+  "api_status": 200,
+  "prediction_state": "ready",
+  "predicted_class": "BENIGN",
+  "source": "first recorded Monday CSV row; smoke test only"
+}

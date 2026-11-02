@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Threat Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dark normal">
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+
+  <div class="app-shell">
+    <header class="topbar glass">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L20 6V11C20 16.5 16.5 21 12 22C7.5 21 4 16.5 4 11V6L12 2Z"></path>
+            <path d="M12 7V12"></path>
+            <path d="M12 17H12.01"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 id="system-name-en">Smart Threat Classifier</h1>
+          <p>Hybrid AI-IDS</p>
+        </div>
+      </div>
+
+      <div class="topbar-meta">
+        <button id="theme-toggle" class="theme-toggle glass-soft">System Theme</button>
+
+        <div class="live-indicator">
+          <span class="dot"></span>
+          <span>Live Monitoring</span>
+          <small>Active</small>
+        </div>
+
+        <div class="time-box glass-soft">
+          <span>Last Update</span>
+          <strong id="last-update">--</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="hero glass normal" id="hero-card">
+        <div class="hero-left">
+          <div class="section-label">
+            <span>System Status</span>
+          </div>
+
+          <div class="hero-status-wrap">
+            <div class="status-orb" id="status-orb">
+              <div class="orb-core"></div>
+              <div class="orb-ring"></div>
+            </div>
+
+            <div class="hero-status-text">
+              <h2 id="status-en">BENIGN</h2>
+              <div class="level-chip" id="risk-level-chip">Normal</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="score-block">
+            <div class="section-label">
+              <span>Threat Level</span>
+            </div>
+            <div class="score-value" id="risk-score">5</div>
+            <div class="score-bar">
+              <div class="score-bar-fill" id="score-bar-fill" style="width: 5%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics-row">
+        <div class="metric-card glass">
+          <div class="metric-title">
+            <span>Confidence Level</span>
+          </div>
+          <div class="metric-value" id="confidence">0%</div>
+        </div>
+
+        <div class="metric-card glass">
+          <div class="metric-title">
+            <span>Alerts Count</span>
+          </div>
+          <div class="metric-value" id="alerts-count">0</div>
+        </div>
+
+        <div class="metric-card glass">
+          <div class="metric-title">
+            <span>Average Risk Score</span>
+          </div>
+          <div class="metric-value" id="avg-risk">0</div>
+        </div>
+
+        <div class="metric-card glass">
+          <div class="metric-title">
+            <span>Detection Probability</span>
+          </div>
+          <div class="metric-value" id="probability">0</div>
+        </div>
+      </section>
+
+      <section class="chart-panel glass">
+        <div class="panel-header">
+          <div>
+            <h3>Live Risk Trend Over Time</h3>
+          </div>
+        </div>
+        <canvas id="riskChart"></canvas>
+      </section>
+
+      <section class="events-panel glass">
+        <div class="panel-header">
+          <div>
+            <h3>Live System Activity Feed</h3>
+          </div>
+        </div>
+        <div id="events-list" class="events-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
