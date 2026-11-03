@@ -10,7 +10,7 @@
 
 ## 🎬 الديمو من عرض التخرج
 
-**▶️ [شاهد فيديو الديمو](docs/assets/demo.mp4)**
+https://github.com/user-attachments/assets/90428a30-a562-4d3a-8c3d-ab5ff00c7451
 
 ![ديمو المشروع الأصلي من البرزنتيشن](docs/assets/presentation-demo.png)
 
